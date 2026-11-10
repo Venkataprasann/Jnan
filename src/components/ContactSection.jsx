@@ -16,23 +16,23 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'your.email@jnanvexa.com',
-    href: 'mailto:your.email@jnanvexa.com',
-    note: '[Replace with official email]',
+    value: 'jnanvexatechnologies@gmail.com',
+    href: 'mailto:jnanvexatechnologies@gmail.com',
+    note: null,
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 00000 00000',
-    href: 'tel:+910000000000',
-    note: '[Replace with official phone number]',
+    value: '+91 88617 88812',
+    href: 'tel:+918861788812',
+    note: null,
   },
   {
     icon: MapPin,
     label: 'Address',
-    value: 'Registered Office Address, City, State, India',
-    href: null,
-    note: '[Replace with registered office address]',
+    value: 'Saroja Tower, 33, Hosur Rd, Adugodi, Bengaluru, Karnataka 560030',
+    href: 'https://maps.google.com/?q=Saroja+Tower,33+Hosur+Rd,Adugodi,Bengaluru,Karnataka+560030',
+    note: null,
   },
 ];
 
@@ -84,7 +84,7 @@ export default function ContactSection() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nService Interested In: ${form.service}\n\nMessage:\n${form.message}`
     );
-    window.location.href = `mailto:your.email@jnanvexa.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:jnanvexatechnologies@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -279,7 +279,7 @@ export default function ContactSection() {
                       ) : (
                         <p className="contact__info-value">{value}</p>
                       )}
-                      <p className="contact__info-note">{note}</p>
+                      {note && <p className="contact__info-note">{note}</p>}
                     </div>
                   </div>
                 ))}
@@ -287,7 +287,7 @@ export default function ContactSection() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/910000000000?text=Hello%2C%20I%27m%20interested%20in%20your%20services."
+                href="https://wa.me/918861788812?text=Hello%2C%20I%27m%20interested%20in%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__whatsapp"

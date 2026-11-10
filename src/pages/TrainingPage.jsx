@@ -11,7 +11,7 @@ import { useFadeIn } from '../hooks/useFadeIn';
 import './PageStyles.css';
 import './TrainingPage.css';
 
-const WHATSAPP_NUMBER = '910000000000'; // Replace with official WhatsApp number
+const WHATSAPP_NUMBER = '918861788812';
 
 const COURSES = [
   {

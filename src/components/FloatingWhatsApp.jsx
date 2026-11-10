@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import './FloatingWhatsApp.css';
 
-const WHATSAPP_NUMBER = '910000000000'; // Replace with official WhatsApp number
+const WHATSAPP_NUMBER = '918861788812';
 
 export default function FloatingWhatsApp() {
   const message = encodeURIComponent(

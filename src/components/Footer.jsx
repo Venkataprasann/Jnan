@@ -103,22 +103,21 @@ export default function Footer() {
               <li>
                 <Mail size={15} strokeWidth={1.75} />
                 <span>
-                  your.email@jnanvexa.com
-                  <small>[Replace with official email]</small>
+                  <a href="mailto:jnanvexatechnologies@gmail.com" style={{color:'inherit'}}>
+                    jnanvexatechnologies@gmail.com
+                  </a>
                 </span>
               </li>
               <li>
                 <Phone size={15} strokeWidth={1.75} />
                 <span>
-                  +91 00000 00000
-                  <small>[Replace with official phone]</small>
+                  <a href="tel:+918861788812" style={{color:'inherit'}}>+91 88617 88812</a>
                 </span>
               </li>
               <li>
                 <MapPin size={15} strokeWidth={1.75} />
                 <span>
-                  Registered Office Address, India
-                  <small>[Replace with office address]</small>
+                  Saroja Tower, 33, Hosur Rd,<br />Adugodi, Bengaluru – 560030
                 </span>
               </li>
             </ul>
