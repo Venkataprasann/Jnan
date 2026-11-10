@@ -1,0 +1,101 @@
+/* About Section */
+.about {
+  background: var(--bg-light);
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__desc {
+  font-size: 0.975rem;
+  color: var(--body-text);
+  line-height: 1.8;
+}
+
+.about__desc--mt { margin-top: 1rem; }
+.about__cta { margin-top: 2rem; }
+
+.about__features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.125rem;
+  padding: 1.375rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 3px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about__feature:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.about__feature--cyan { border-left-color: var(--cyan); }
+.about__feature--teal { border-left-color: var(--teal); }
+.about__feature--purple { border-left-color: var(--purple); }
+
+.about__feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.about__feature-icon--cyan { background: rgba(0,207,255,0.1); color: var(--cyan); }
+.about__feature-icon--teal { background: rgba(8,185,157,0.1); color: var(--teal); }
+.about__feature-icon--purple { background: rgba(117,71,232,0.1); color: var(--purple); }
+
+.about__feature-title {
+  font-size: 1.0625rem;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.about__feature-desc {
+  font-size: 0.875rem;
+  color: var(--body-text);
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__feature {
+    padding: 1.125rem;
+    gap: 0.875rem;
+  }
+
+  .about__feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,77 @@
+/* Why Us Section */
+.whyus { background: var(--bg-light); }
+
+.whyus__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whyus__header .section-label { justify-content: center; }
+.whyus__header .section-label::before { display: none; }
+
+.whyus__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.125rem;
+}
+
+.whyus__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.375rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.whyus__card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.whyus__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.125rem;
+}
+
+.whyus__icon--cyan { background: rgba(0,207,255,0.1); color: var(--cyan); }
+.whyus__icon--purple { background: rgba(117,71,232,0.1); color: var(--purple); }
+.whyus__icon--teal { background: rgba(8,185,157,0.1); color: var(--teal); }
+
+.whyus__title {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.whyus__desc {
+  font-size: 0.875rem;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .whyus__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .whyus__grid { grid-template-columns: 1fr; gap: 0.875rem; }
+
+  .whyus__card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .whyus__icon { margin-bottom: 0; flex-shrink: 0; }
+}

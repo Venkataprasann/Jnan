@@ -1,0 +1,519 @@
+/* ============================================
+   TRAINING PAGE STYLES
+   ============================================ */
+
+/* Hero stats */
+.tc-hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.tc-hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.tc-hero-stat strong {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--cyan);
+  font-family: var(--font-heading);
+}
+
+.tc-hero-stat span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+.tc-hero-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* WhatsApp bar — ambient style */
+.tc-whatsapp-bar {
+  background: rgba(7, 27, 73, 0.04);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.tc-whatsapp-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tc-whatsapp-bar__inner > span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--body-text);
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+.tc-whatsapp-bar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid rgba(7,27,73,0.2);
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+}
+
+.tc-whatsapp-bar__btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(7,27,73,0.15);
+}
+
+/* Section header */
+.tc-section {
+  background: var(--white);
+}
+
+.tc-section__header {
+  margin-bottom: 2.5rem;
+}
+
+/* Course cards */
+.tc-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual course card */
+.tc-card {
+  background: var(--bg-light);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  border: 1px solid var(--border);
+  border-top: 4px solid transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.tc-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.tc-card--cyan { border-top-color: var(--cyan); }
+.tc-card--teal { border-top-color: var(--teal); }
+.tc-card--purple { border-top-color: var(--purple); }
+
+/* Card header */
+.tc-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tc-card__header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.tc-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tc-card__icon--cyan { background: rgba(0,207,255,0.12); color: var(--cyan); }
+.tc-card__icon--teal { background: rgba(8,185,157,0.12); color: var(--teal); }
+.tc-card__icon--purple { background: rgba(117,71,232,0.12); color: var(--purple); }
+
+.tc-card__header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.tc-card__title {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.tc-card__badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  flex-shrink: 0;
+}
+
+.tc-card__badge--cyan { background: rgba(0,207,255,0.15); color: #0096bb; }
+.tc-card__badge--teal { background: rgba(8,185,157,0.15); color: #067a68; }
+.tc-card__badge--purple { background: rgba(117,71,232,0.15); color: var(--purple); }
+
+.tc-card__subtitle {
+  font-size: 0.875rem;
+  color: var(--body-text);
+  font-weight: 500;
+}
+
+/* Meta row */
+.tc-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.tc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--navy);
+}
+
+.tc-meta-item svg {
+  color: var(--body-text);
+  flex-shrink: 0;
+}
+
+.tc-card__overview {
+  font-size: 0.95rem;
+  color: var(--body-text);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+/* Fee note */
+.tc-fee-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+.tc-fee-note--cyan { background: rgba(0,207,255,0.08); color: #0096bb; }
+.tc-fee-note--teal { background: rgba(8,185,157,0.08); color: #067a68; }
+.tc-fee-note--purple { background: rgba(117,71,232,0.08); color: var(--purple); }
+
+/* Highlights */
+.tc-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tc-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.775rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+}
+
+.tc-highlight--cyan { background: rgba(0,207,255,0.1); color: #0096bb; }
+.tc-highlight--teal { background: rgba(8,185,157,0.1); color: #067a68; }
+.tc-highlight--purple { background: rgba(117,71,232,0.1); color: var(--purple); }
+
+/* Certifications */
+.tc-certs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  color: var(--body-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tc-certs svg {
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+/* Toggle button */
+.tc-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.tc-toggle--cyan {
+  background: rgba(0,207,255,0.08);
+  color: #0096bb;
+  border-color: rgba(0,207,255,0.2);
+}
+.tc-toggle--cyan:hover { background: rgba(0,207,255,0.14); }
+
+.tc-toggle--teal {
+  background: rgba(8,185,157,0.08);
+  color: #067a68;
+  border-color: rgba(8,185,157,0.2);
+}
+.tc-toggle--teal:hover { background: rgba(8,185,157,0.14); }
+
+.tc-toggle--purple {
+  background: rgba(117,71,232,0.08);
+  color: var(--purple);
+  border-color: rgba(117,71,232,0.2);
+}
+.tc-toggle--purple:hover { background: rgba(117,71,232,0.14); }
+
+/* Curriculum */
+.tc-curriculum {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  animation: expandDown 0.3s ease;
+}
+
+@keyframes expandDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tc-module {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.tc-module__heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+.tc-module__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tc-module__items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  color: var(--body-text);
+  line-height: 1.4;
+}
+
+.tc-module__items li svg {
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Card actions */
+.tc-card__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.tc-btn-enroll {
+  border-radius: 50px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  padding: 0.875rem 1.75rem;
+  flex: 1;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.tc-btn-enroll--cyan { background: #25D366; color: #0a2416; }
+.tc-btn-enroll--cyan:hover { background: #22c55e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+.tc-btn-enroll--teal { background: #25D366; color: #0a2416; }
+.tc-btn-enroll--teal:hover { background: #22c55e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+.tc-btn-enroll--purple { background: #25D366; color: #0a2416; }
+.tc-btn-enroll--purple:hover { background: #22c55e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+.tc-btn-contact {
+  border-radius: 50px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* Why train with us */
+.tc-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.tc-why-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tc-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.tc-why-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc-why-icon--cyan { background: rgba(0,207,255,0.1); color: var(--cyan); }
+.tc-why-icon--teal { background: rgba(8,185,157,0.1); color: var(--teal); }
+.tc-why-icon--purple { background: rgba(117,71,232,0.1); color: var(--purple); }
+
+.tc-why-card h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.tc-why-card p {
+  font-size: 0.875rem;
+  color: var(--body-text);
+  line-height: 1.65;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .tc-curriculum {
+    grid-template-columns: 1fr;
+  }
+
+  .tc-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tc-card {
+    padding: 1.5rem;
+  }
+
+  .tc-card__header-left {
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .tc-card__meta {
+    gap: 0.75rem 1rem;
+  }
+
+  .tc-card__actions {
+    flex-direction: column;
+  }
+
+  .tc-btn-enroll {
+    width: 100%;
+  }
+
+  .tc-btn-contact {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tc-whatsapp-bar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .tc-whatsapp-bar__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .tc-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tc-hero-stats {
+    gap: 1rem;
+  }
+
+  .tc-hero-stat-divider {
+    display: none;
+  }
+
+  .tc-card__header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

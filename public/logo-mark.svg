@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background: transparent (we show only the JV mark) -->
+  
+  <!-- J letter - cyan/teal gradient -->
+  <defs>
+    <linearGradient id="jGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CFFF"/>
+      <stop offset="100%" stop-color="#08B99D"/>
+    </linearGradient>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7547E8"/>
+      <stop offset="100%" stop-color="#00CFFF"/>
+    </linearGradient>
+    <linearGradient id="pixelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7547E8"/>
+      <stop offset="100%" stop-color="#9b6ef3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- J letter shape -->
+  <path d="M55 40 L75 40 L75 130 Q75 160 50 165 Q35 168 28 158 L40 148 Q46 155 55 150 Q65 145 65 130 L65 50 L55 50 Z" 
+        fill="url(#jGrad)"/>
+  
+  <!-- V letter shape -->
+  <path d="M90 40 L115 40 L140 120 L165 40 L180 40 L145 165 L135 165 Z" 
+        fill="url(#vGrad)"/>
+  
+  <!-- Pixel dots accent (top right of V) -->
+  <rect x="168" y="28" width="10" height="10" rx="2" fill="url(#pixelGrad)" opacity="0.9"/>
+  <rect x="182" y="28" width="8" height="8" rx="2" fill="url(#pixelGrad)" opacity="0.7"/>
+  <rect x="168" y="14" width="8" height="8" rx="2" fill="url(#pixelGrad)" opacity="0.5"/>
+  <rect x="180" y="14" width="6" height="6" rx="1.5" fill="url(#pixelGrad)" opacity="0.4"/>
+</svg>
