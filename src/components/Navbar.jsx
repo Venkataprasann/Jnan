@@ -16,15 +16,6 @@ const NAV_LINKS = [
 function Logo({ onClick }) {
   return (
     <Link to="/" className="navbar__logo" aria-label="Jnan-Vexa Technologies Home" onClick={onClick}>
-      <img
-        src="/logo-mark.svg"
-        alt=""
-        className="navbar__logo-mark"
-        aria-hidden="true"
-        loading="eager"
-        width="40"
-        height="40"
-      />
       <span className="navbar__logo-wordmark">
         <span className="navbar__logo-name">
           Jnan-<span className="navbar__logo-accent">Vexa</span>

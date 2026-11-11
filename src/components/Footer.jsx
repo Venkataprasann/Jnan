@@ -35,14 +35,6 @@ export default function Footer() {
           {/* Brand column */}
           <div className="footer__brand">
             <Link to="/" className="footer__logo">
-              <img
-                src="/logo-mark.svg"
-                alt=""
-                aria-hidden="true"
-                className="footer__logo-img"
-                width="44"
-                height="44"
-              />
               <span className="footer__logo-wordmark">
                 Jnan-<span className="footer__logo-accent">Vexa</span>
                 <small>Technologies</small>
