@@ -106,7 +106,7 @@ export default function HeroSection() {
             {/* 3D Logo platform */}
             <div className="hero__logo-platform">
               <img
-                src="/logo-3d.png"
+                src="/logo-3d-transparent.png"
                 alt="Jnan-Vexa Technologies JV Logo"
                 className="hero__logo-3d-img"
                 loading="eager"
@@ -146,7 +146,7 @@ export default function HeroSection() {
         {/* 3D Logo */}
         <div className="hero__m-platform">
           <img
-            src="/logo-3d.png"
+            src="/logo-3d-transparent.png"
             alt="Jnan-Vexa Technologies"
             className="hero__m-logo-img"
           />
