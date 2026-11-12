@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import {
-  ArrowRight, GraduationCap, Users, Lightbulb
-} from 'lucide-react';
+import { ArrowRight, GraduationCap, Users, Lightbulb } from 'lucide-react';
 import './HeroSection.css';
 
 const HIGHLIGHTS = [
@@ -10,13 +8,13 @@ const HIGHLIGHTS = [
   { icon: Lightbulb,     text: 'Innovative Tech Solutions' },
 ];
 
-const ORBIT_ITEMS = [
-  { label: 'Full Stack Dev', color: 'cyan'   },
-  { label: 'Data Analytics', color: 'teal'   },
-  { label: 'Cybersecurity',  color: 'purple' },
-  { label: 'Generative AI',  color: 'cyan'   },
-  { label: 'Study Abroad',   color: 'teal'   },
-  { label: 'Mobile Apps',    color: 'purple' },
+const CHIPS = [
+  { label: 'Full Stack Dev', color: 'cyan',   pos: 1 },
+  { label: 'Data Analytics', color: 'teal',   pos: 2 },
+  { label: 'Cybersecurity',  color: 'purple', pos: 3 },
+  { label: 'Generative AI',  color: 'cyan',   pos: 4 },
+  { label: 'Study Abroad',   color: 'teal',   pos: 5 },
+  { label: 'Mobile Apps',    color: 'purple', pos: 6 },
 ];
 
 export default function HeroSection() {
@@ -26,8 +24,6 @@ export default function HeroSection() {
       {/* ── Background Layer ── */}
       <div className="hero__bg" aria-hidden="true">
         <div className="hero__bg-base" />
-
-        {/* SVG dot grid */}
         <svg className="hero__bg-grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <pattern id="heroGrid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
@@ -40,13 +36,9 @@ export default function HeroSection() {
           <rect width="100%" height="100%" fill="url(#heroGrid)" />
           <rect width="100%" height="100%" fill="url(#heroDots)" />
         </svg>
-
-        {/* Glowing blobs */}
         <div className="hero__blob hero__blob--cyan"   />
         <div className="hero__blob hero__blob--purple" />
         <div className="hero__blob hero__blob--teal"   />
-
-        {/* Accent lines */}
         <div className="hero__accent-line hero__accent-line--1" />
         <div className="hero__accent-line hero__accent-line--2" />
       </div>
@@ -98,66 +90,76 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right — Visual (desktop only) */}
+        {/* ── Right — 3D Logo Visual (desktop) ── */}
         <div className="hero__visual" aria-hidden="true">
-          <div className="hero__orb-wrap">
-            {/* Pulsing rings */}
-            <div className="hero__ring hero__ring--1" />
-            <div className="hero__ring hero__ring--2" />
-            <div className="hero__ring hero__ring--3" />
+          <div className="hero__stage">
 
-            {/* Logo centrepiece */}
-            <div className="hero__logo-centre">
-              <img src="/logo-mark.svg" alt="" className="hero__logo-img" />
+            {/* Atmospheric glow behind everything */}
+            <div className="hero__stage-aura hero__stage-aura--cyan"   />
+            <div className="hero__stage-aura hero__stage-aura--purple" />
+
+            {/* Concentric pulse rings */}
+            <div className="hero__stage-ring hero__stage-ring--1" />
+            <div className="hero__stage-ring hero__stage-ring--2" />
+            <div className="hero__stage-ring hero__stage-ring--3" />
+
+            {/* 3D Logo platform */}
+            <div className="hero__logo-platform">
+              <img
+                src="/logo-3d.png"
+                alt="Jnan-Vexa Technologies JV Logo"
+                className="hero__logo-3d-img"
+                loading="eager"
+              />
+              {/* Ground reflection glow */}
+              <div className="hero__logo-ground" />
             </div>
 
-            {/* Orbiting cards */}
-            <div className="hero__orbit hero__orbit--outer">
-              {ORBIT_ITEMS.map((item, i) => (
-                <div
-                  key={item.label}
-                  className={`hero__orbit-item hero__orbit-item--${item.color}`}
-                  style={{ '--i': i, '--total': 6 }}
-                >
-                  {item.label}
-                </div>
-              ))}
-            </div>
+            {/* Floating service chips */}
+            {CHIPS.map(({ label, color, pos }) => (
+              <span
+                key={label}
+                className={`hero__chip hero__chip--${pos} hero__chip--${color}`}
+              >
+                {label}
+              </span>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════
-          MOBILE HERO — Full redesign with logo
-          ══════════════════════════════════════════ */}
+      {/* ══════════════════════════════════════
+          MOBILE HERO — 3D Logo Visual
+          ══════════════════════════════════════ */}
       <div className="hero__mobile-visual" aria-hidden="true">
 
-        {/* Background glow rings behind logo */}
-        <div className="hero__m-glow hero__m-glow--outer" />
-        <div className="hero__m-glow hero__m-glow--mid"   />
-        <div className="hero__m-glow hero__m-glow--inner" />
+        {/* Atmospheric halos */}
+        <div className="hero__m-halo hero__m-halo--outer" />
+        <div className="hero__m-halo hero__m-halo--mid"   />
+        <div className="hero__m-halo hero__m-halo--inner" />
 
         {/* Pulsing scan rings */}
         <div className="hero__m-ring hero__m-ring--1" />
         <div className="hero__m-ring hero__m-ring--2" />
         <div className="hero__m-ring hero__m-ring--3" />
 
-        {/* Full company logo — fits perfectly on dark bg */}
-        <div className="hero__m-logo-wrap">
+        {/* 3D Logo */}
+        <div className="hero__m-platform">
           <img
-            src="/logo.png"
+            src="/logo-3d.png"
             alt="Jnan-Vexa Technologies"
             className="hero__m-logo-img"
           />
+          <div className="hero__m-ground" />
         </div>
 
-        {/* Floating service chips */}
+        {/* Floating chips */}
         <span className="hero__m-chip hero__m-chip--1">🎓 Training</span>
         <span className="hero__m-chip hero__m-chip--2">🌍 Consultancy</span>
         <span className="hero__m-chip hero__m-chip--3">💻 IT Services</span>
         <span className="hero__m-chip hero__m-chip--4">🤖 AI & Cloud</span>
 
-        {/* Tagline banner below logo */}
+        {/* Tagline */}
         <div className="hero__m-tagline">
           <span>Learn</span>
           <span className="hero__m-tagline-sep">|</span>
